@@ -1,0 +1,79 @@
+
+int add(int a, int b) {
+  return a + b;
+}
+
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+
+  void greet() {
+    print('Hello, my name is $name');
+  }
+}
+
+void main() {
+  print('--- Variable Demo ---');
+
+  int number = 42;
+  double pi = 3.1416;
+  String message = 'Hello Dart';
+  bool isStudent = true;
+
+  List<String> fruits = ['apple', 'banana', 'cherry'];
+  Map<String, dynamic> personData = {
+    'name': 'Alice',
+    'age': 25
+  };
+
+  print('Integer: $number');
+  print('Double: $pi');
+  print('String: $message');
+  print('Boolean: $isStudent');
+  print('List: $fruits');
+  print('Map: $personData');
+
+  print('\n--- var, final & const ---');
+  var city = 'Vinukonda';
+  final int finalVar = 100;
+  const double constVar = 3.14;
+
+  print('City: $city');
+  print('finalVar = $finalVar');
+  print('constVar = $constVar');
+
+  print('\n--- Function Demo ---');
+  print('Sum of 5 and 7 = ${add(5, 7)}');
+
+  print('\n--- If-Else Demo ---');
+  int marks = 75;
+  if (marks >= 50) {
+    print('Pass');
+  } else {
+    print('Fail');
+  }
+
+  print('\n--- For Loop Demo ---');
+  for (int i = 1; i <= 5; i++) {
+    stdoutPrint(i);
+  }
+
+  print('\n--- While Loop Demo ---');
+  int count = 1;
+  while (count <= 3) {
+    stdoutPrint(count);
+    count++;
+  }
+
+  print('\n--- Class Demo ---');
+  Person p = Person('John', 30);
+  print('Person: ${p.name}, Age: ${p.age}');
+  print('Greeting:');
+  p.greet();
+}
+
+void stdoutPrint(int value) {
+  print(value);
+}
